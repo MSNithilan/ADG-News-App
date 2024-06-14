@@ -1,5 +1,5 @@
 const API_KEY="216f96140a504e87beaa9b9b2cfc6557";
-const url="https://cors-anywhere.herokuapp.com/http://newsapi.org/v2/everything?q="
+const url="https://newsapi.org/v2/everything?q="
 window.addEventListener('load',()=>getNews("India"));
 function reload(){
     window.location.reload();
