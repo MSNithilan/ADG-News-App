@@ -16,13 +16,22 @@
             </div>
             <div class="navlink">
                 <ul class="flex">
-                    <li class="navlinkitem" id="latest" onclick="reload()">Latest</li>
+                    <li class="navlinkitem" id="latest" onclick="onNavClick('latest')">Latest</li>
                     <li class="navlinkitem" id="sports" onclick="onNavClick('sports')">Sports</li>
                     <li class="navlinkitem" id="politics" onclick="onNavClick('politics')">Politics</li>
                     <li class="navlinkitem" id="finance" onclick="onNavClick('finance')">Finance</li>
                 </ul>
             </div>
             <div class="searchbar">
+                <div class="region">
+                    <select name="region-select" id="region-select">
+                        <option value="international">Inter</option>
+                        <option value="india">Ind</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                    <button class="region-button" id="region-button">Select</button>
+                </div>
                 <input type="text" name="search-input" id="search-input" placeholder="e.g. IPL">
                 <button class="search-button" id="search-button">Search</button>
             </div>
