@@ -57,3 +57,15 @@ searchButton.addEventListener('click',()=>{
     navSelected?.classList.remove('active');
     navSelected=null;
 })
+
+const regionButton=document.getElementById('region-button');
+const regionText=document.getElementById('region-select');
+regionButton.addEventListener('click',()=>{
+    const query=regionText.value;
+    if(!query){
+        return;
+    }
+    getNews(query);
+    navSelected?.classList.remove('active');
+    navSelected=null;
+})
