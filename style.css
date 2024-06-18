@@ -61,13 +61,16 @@ ul{
     width: 4vw;
     height: 4vh;
     position: relative;
+    color: black;
     bottom: 2vh;
-    color: #0b121f;
     font-size: 1.3em;
     border-radius: 5px;
 }
 #region-select:focus{
     outline: none;
+}
+option{
+    color: black;
 }
 #search-input{
     width: 250px;
