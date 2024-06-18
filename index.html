@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- header -->
     <nav>
         <div class="container flex">
+            <!-- logo -->
             <div class="navlogo">
                 <a href="#" onclick="reload()"><img src="ADG logo.png" alt="logo" id="logo"></a>
                 <h4>ADG News</h4>
             </div>
+            <!-- menu -->
             <div class="navlink">
                 <ul class="flex">
                     <li class="navlinkitem" id="latest" onclick="onNavClick('latest')">Latest</li>
@@ -22,6 +26,7 @@
                     <li class="navlinkitem" id="finance" onclick="onNavClick('finance')">Finance</li>
                 </ul>
             </div>
+            <!-- searchbar -->
             <div class="searchbar">
                 <div class="region">
                     <select name="region-select" id="region-select">
@@ -32,11 +37,15 @@
                     </select>
                     <button class="region-button" id="region-button">Select</button>
                 </div>
+                <!-- region selector -->
                 <input type="text" name="search-input" id="search-input" placeholder="e.g. IPL">
                 <button class="search-button" id="search-button">Search</button>
             </div>
         </div>
     </nav>
+    
+    <!-- dynamic news cards -->
+    
     <main>
         <div class="newscards container flex" id="newscards">
             
