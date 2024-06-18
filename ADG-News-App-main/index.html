@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADG News App</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <nav>
+        <div class="container flex">
+            <!-- logo -->
+            <div class="navlogo">
+                <a href="#" onclick="reload()"><img src="ADG logo.png" alt="logo" id="logo"></a>
+                <h4>ADG News</h4>
+            </div>
+            <!-- menu -->
+            <div class="navlink">
+                <ul class="flex">
+                    <li class="navlinkitem" id="latest" onclick="onNavClick('latest')">Latest</li>
+                    <li class="navlinkitem" id="sports" onclick="onNavClick('sports')">Sports</li>
+                    <li class="navlinkitem" id="politics" onclick="onNavClick('politics')">Politics</li>
+                    <li class="navlinkitem" id="finance" onclick="onNavClick('finance')">Finance</li>
+                </ul>
+            </div>
+            <!-- searchbar -->
+            <div class="searchbar">
+                <div class="region">
+                    <select name="region-select" id="region-select">
+                        <option value="international">Inter</option>
+                        <option value="india">Ind</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                    <button class="region-button" id="region-button">Select</button>
+                </div>
+                <!-- region selector -->
+                <input type="text" name="search-input" id="search-input" placeholder="e.g. IPL">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- dynamic news cards -->
+    
+    <main>
+        <div class="newscards container flex" id="newscards">
+            
+        </div>
+    </main>
+    <template id="news-card-temp">
+        <div class="card">
+            <div class="card-img">
+                <img src="https://via.placeholder.com/400x200" alt="newsimg" id="newsimg">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is a title</h3>
+                <h6 id="news-source" class="news-source">Date is 13/06/2024</h6>
+                <p id="news-desc" class="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, animi voluptatum. Est quidem recusandae totam. Praesentium quam corrupti fuga beatae?</p>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
