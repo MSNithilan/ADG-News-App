@@ -1,14 +1,20 @@
+//external api kay
+
 const API_KEY="216f96140a504e87beaa9b9b2cfc6557";
 const url="https://newsapi.org/v2/everything?q="
-window.addEventListener('load',()=>getNews("India"));
+//load first page
+window.addEventListener('load',()=>getNews("International"));
+//reload function when logo is pressed
 function reload(){
     window.location.reload();
 }
+//send request to external api
 async function getNews(query){
     const res=await fetch(`${url}${query}&apiKey=${API_KEY}`);
     const data=await res.json();
     bindData(data.articles);
 }
+//populate flash cards
 function bindData(articles){
     const newsCards=document.getElementById('newscards');
     const newsCardTemp=document.getElementById('news-card-temp');
@@ -22,6 +28,7 @@ function bindData(articles){
         newsCards.appendChild(cloneCard);
     })
 }
+//fill data in cards
 function fillCardData(cloneCard,article){
     const newsImg=cloneCard.querySelector('#newsimg');
     const newsTitle=cloneCard.querySelector('#news-title');
@@ -38,6 +45,7 @@ function fillCardData(cloneCard,article){
         window.open(article.url,"_blank");
     })
 }
+//to highlight selected menu tab
 let navSelected=null;
 function onNavClick(id){
     getNews(id);
